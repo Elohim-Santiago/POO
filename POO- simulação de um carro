@@ -5,7 +5,7 @@ class objeto:
       self.ligado = ligado
       self.marcha = marcha
 
-   def andar(self,ligado):
+   def andar(self):
       if self.ligado == True:
          print("O Carro já está ligado")
          return
@@ -20,18 +20,29 @@ class objeto:
       else: 
          print("Máximo de marcha foi atingida!!!")
 
-   def desligado(self, ligado):
+   def desligado(self):
       if self.ligado == False:
          print("O carro está desligado")
          return
       self.ligado = False
       print("Carro desligado!!")
 
+   def mudar_cor(self,cor):
+      self.cor = cor
+
 car = objeto("BMW","azul")
-car.andar(True)
-#car.pass_marcha(1)
+print(dir("a"))
+
+car.andar()
+car.andar()
+print(car.cor)
+car.mudar_cor("verde")
+print(car.cor)
+
 #car.pass_marcha(1)
 #car.pass_marcha(3)
-car.desligado(False)
-car.desligado(False)
+#car.pass_marcha(1)
+#car.pass_marcha(3)
+#car.desligado(False)
+#car.desligado(False)
   

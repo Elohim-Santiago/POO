@@ -1,0 +1,37 @@
+class objeto:
+   def __init__(self, veiculo, cor, ligado=False, marcha=0):
+      self.veiculo = veiculo
+      self.cor = cor
+      self.ligado = ligado
+      self.marcha = marcha
+
+   def andar(self,ligado):
+      if self.ligado == True:
+         print("O Carro já está ligado")
+         return
+      self.ligado = True
+      print("ligado")
+
+   def pass_marcha(self, mar=0):
+      qt_marcha = 9
+      if self.marcha + mar <= qt_marcha:
+         self.marcha += mar
+         print(f" A {self.marcha}º marcha foi passada!! Atualmente você está na {self.marcha}º marcha!!")
+      else: 
+         print("Máximo de marcha foi atingida!!!")
+
+   def desligado(self, ligado):
+      if self.ligado == False:
+         print("O carro está desligado")
+         return
+      self.ligado = False
+      print("Carro desligado!!")
+
+car = objeto("BMW","azul")
+car.andar(True)
+#car.pass_marcha(1)
+#car.pass_marcha(1)
+#car.pass_marcha(3)
+car.desligado(False)
+car.desligado(False)
+  

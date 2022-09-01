@@ -17,6 +17,8 @@ class objeto:
       if self.marcha + mar <= qt_marcha:
          self.marcha += mar
          print(f" A {self.marcha}º marcha foi passada!! Atualmente você está na {self.marcha}º marcha!!")
+      elif mar < 0:
+        self.marcha - mar  
       else: 
          print("Máximo de marcha foi atingida!!!")
 
@@ -40,9 +42,9 @@ car.mudar_cor("verde")
 print(car.cor)
 
 #car.pass_marcha(1)
-#car.pass_marcha(3)
-#car.pass_marcha(1)
-#car.pass_marcha(3)
+car.pass_marcha(3)
+#print(car.marcha)
+#car.pass_marcha(-1)
+#car.pass_marcha(0)
 #car.desligado(False)
 #car.desligado(False)
-  

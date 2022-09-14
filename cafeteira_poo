@@ -1,0 +1,39 @@
+class cafeteira: 
+    def __init__(self, ligado=False, agua=None, po_cafe=None, quente=False, fria= False, tempo =0):
+        self.ligado = ligado
+        self.agua = agua
+        self.cafe = po_cafe
+        self.tempo = tempo
+
+
+    def maquina_ligada(self):
+        if self.ligado == True:
+            print("Máquina já estar em funcionamento!!!")
+            return
+        self.ligado = True
+        print("Máquina ligada!")
+      
+    def estado_agua (self, temp = 0):
+        qt_tempo = 3
+        if self.tempo + temp <= qt_tempo:
+            self.tempo += temp
+            if self.tempo == 3:
+                print("Aǵua já ferveu... Adicionando o pó de café")
+                print("Café pronto!!!")
+            else:
+                print("água ainda não ferveu!!!")          
+
+    def maquina_desligada(self):
+        if self.ligado == False:
+            print("A máquina já está desligada!!!")
+            return
+        self.ligado = False
+        print("Máquina desligada")
+
+
+cafeteira_teste = cafeteira()
+#cafeteira_teste.maquina_ligada()
+#cafeteira_teste.maquina_ligada()
+#cafeteira_teste.maquina_desligada()
+#cafeteira_teste.maquina_desligada()
+#cafeteira_teste.estado_agua(2)
